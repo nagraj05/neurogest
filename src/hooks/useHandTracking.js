@@ -10,11 +10,11 @@ const MODEL_URL =
 // avoids running detectForVideo twice per unique frame on 60fps displays.
 const MIN_FRAME_MS = 1000 / 30
 
-// MediaPipe reports handedness assuming a mirrored (selfie) feed.
-// We feed raw video and mirror it via CSS, so we flip the label
-// to match the user's actual left/right perspective.
+// MediaPipe reports handedness based on the physical hand (Left = user's left hand).
+// We keep the label as-is so "left" always means the user's physical left hand,
+// regardless of which side of the mirrored screen it appears on.
 function toUserSide(mpLabel) {
-  return mpLabel === 'Left' ? 'right' : 'left'
+  return mpLabel === 'Left' ? 'left' : 'right'
 }
 
 export function useHandTracking() {
