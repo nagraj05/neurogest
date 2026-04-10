@@ -26,7 +26,7 @@ export default function Home() {
   return (
     <div className={styles.page}>
       <header className={styles.header}>
-        <div className={styles.logo}>GestureCanvas</div>
+        <div className={styles.logo}>NeuroGest</div>
         <p className={styles.tagline}>Control with your hands. No mouse required.</p>
       </header>
 
