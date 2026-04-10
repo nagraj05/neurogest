@@ -1,0 +1,117 @@
+.panel {
+  position: absolute;
+  bottom: 1.25rem;
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  align-items: flex-start;
+  gap: 0;
+  background: rgba(10, 10, 15, 0.85);
+  border: 1px solid var(--border);
+  border-radius: 0.75rem;
+  padding: 0.75rem 1rem;
+  backdrop-filter: blur(8px);
+  font-size: 0.75rem;
+  font-family: monospace;
+  z-index: 20;
+  min-width: 360px;
+}
+
+.hand {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 0.4rem;
+}
+
+.handLabel {
+  color: var(--text-secondary);
+  font-weight: 600;
+  font-size: 0.7rem;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+}
+
+.divider {
+  width: 1px;
+  background: var(--border);
+  margin: 0 0.75rem;
+  align-self: stretch;
+}
+
+.gestures {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.3rem;
+}
+
+.gesture {
+  display: flex;
+  align-items: center;
+  gap: 0.2rem;
+  padding: 0.15rem 0.4rem;
+  border-radius: 0.3rem;
+  border: 1px solid var(--border);
+  color: var(--text-secondary);
+  opacity: 0.45;
+  transition: opacity 0.1s, border-color 0.1s;
+}
+
+.gesture.active {
+  opacity: 1;
+  border-color: var(--accent-draw);
+  color: var(--accent-draw);
+}
+
+.icon { font-size: 0.9rem; }
+.label { font-size: 0.65rem; }
+
+.noGesture {
+  color: var(--text-secondary);
+  opacity: 0.4;
+  font-size: 0.7rem;
+}
+
+.coords {
+  color: var(--text-secondary);
+  font-size: 0.65rem;
+  opacity: 0.6;
+}
+
+.peaceBar {
+  position: relative;
+  height: 4px;
+  background: var(--border);
+  border-radius: 2px;
+  overflow: hidden;
+}
+
+.peaceBarFill {
+  position: absolute;
+  inset: 0 auto 0 0;
+  background: var(--accent-draw);
+  border-radius: 2px;
+  transition: width 0.05s linear;
+}
+
+.peaceBarLabel {
+  position: absolute;
+  right: 0;
+  top: -14px;
+  font-size: 0.6rem;
+  color: var(--accent-draw);
+}
+
+.twoHand {
+  position: absolute;
+  top: -1.75rem;
+  left: 50%;
+  transform: translateX(-50%);
+  background: rgba(10, 10, 15, 0.85);
+  border: 1px solid var(--border);
+  border-radius: 0.4rem;
+  padding: 0.2rem 0.6rem;
+  font-size: 0.7rem;
+  color: var(--accent-solar);
+  white-space: nowrap;
+}

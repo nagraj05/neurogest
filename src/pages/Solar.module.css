@@ -1,0 +1,96 @@
+.shell {
+  position: relative;
+  width: 100vw;
+  height: 100vh;
+  background: #020208;
+  overflow: hidden;
+}
+
+.back {
+  position: absolute;
+  top: 1.25rem;
+  left: 1.25rem;
+  z-index: 40;
+  color: var(--text-secondary);
+  font-size: 0.875rem;
+  font-weight: 500;
+  padding: 0.4rem 0.75rem;
+  border: 1px solid var(--border);
+  border-radius: 0.5rem;
+  background: rgba(19, 19, 26, 0.75);
+  backdrop-filter: blur(6px);
+  cursor: pointer;
+  transition: color 0.15s, border-color 0.15s;
+}
+.back:hover { color: var(--text-primary); border-color: var(--text-secondary); }
+
+.hints {
+  position: absolute;
+  bottom: 1.25rem;
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  gap: 1.25rem;
+  background: rgba(10, 10, 15, 0.7);
+  border: 1px solid var(--border);
+  border-radius: 2rem;
+  padding: 0.5rem 1.25rem;
+  backdrop-filter: blur(6px);
+  z-index: 20;
+}
+
+.hints span {
+  font-size: 0.75rem;
+  color: var(--text-secondary);
+  white-space: nowrap;
+  cursor: default;
+}
+
+/* Skeleton toggle button */
+.skeletonBtn {
+  position: absolute;
+  top: 1.25rem;
+  right: 1.25rem;
+  z-index: 40;
+  font-size: 0.8rem;
+  font-weight: 500;
+  padding: 0.4rem 0.75rem;
+  border: 1px solid var(--border);
+  border-radius: 0.5rem;
+  background: rgba(19, 19, 26, 0.75);
+  backdrop-filter: blur(6px);
+  color: var(--text-secondary);
+  cursor: pointer;
+  transition: color 0.15s, border-color 0.15s, background 0.15s;
+}
+.skeletonBtn:hover {
+  color: var(--text-primary);
+  border-color: var(--text-secondary);
+}
+.skeletonBtnOn {
+  border-color: var(--accent-draw);
+  color: var(--accent-draw);
+  background: rgba(167, 139, 250, 0.1);
+}
+
+/* Hand mode switcher button — sits left of the skeleton button */
+.modeBtn {
+  position: absolute;
+  top: 1.25rem;
+  right: calc(1.25rem + 130px + 0.5rem); /* offset past skeletonBtn */
+  z-index: 40;
+  font-size: 0.8rem;
+  font-weight: 500;
+  padding: 0.4rem 0.75rem;
+  border: 1px solid var(--border);
+  border-radius: 0.5rem;
+  background: rgba(19, 19, 26, 0.75);
+  backdrop-filter: blur(6px);
+  color: var(--text-secondary);
+  cursor: pointer;
+  transition: color 0.15s, border-color 0.15s;
+}
+.modeBtn:hover {
+  color: var(--text-primary);
+  border-color: var(--text-secondary);
+}

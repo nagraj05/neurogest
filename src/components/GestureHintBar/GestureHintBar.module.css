@@ -1,0 +1,38 @@
+.bar {
+  position: absolute;
+  top: 1.25rem;
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  gap: 0.5rem;
+  z-index: 40;
+  pointer-events: none;
+}
+
+.chip {
+  display: flex;
+  align-items: center;
+  gap: 0.35rem;
+  padding: 0.3rem 0.65rem;
+  border-radius: 2rem;
+  background: rgba(10, 10, 15, 0.7);
+  border: 1px solid var(--border);
+  backdrop-filter: blur(6px);
+  font-size: 0.75rem;
+  font-weight: 500;
+  transition: opacity 0.2s;
+}
+
+.chipIcon {
+  font-size: 0.95rem;
+  line-height: 1;
+}
+
+.chipLabel {
+  color: var(--text-secondary);
+  white-space: nowrap;
+}
+
+/* Accent the active chip side slightly */
+.left  { border-color: rgba(100, 180, 255, 0.35); }
+.right { border-color: rgba(167, 139, 250, 0.35); }

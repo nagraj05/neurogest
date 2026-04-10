@@ -1,0 +1,136 @@
+.page {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 2rem;
+  gap: 3rem;
+}
+
+.header {
+  text-align: center;
+}
+
+.logo {
+  font-size: 2.5rem;
+  font-weight: 800;
+  letter-spacing: -0.03em;
+  background: linear-gradient(135deg, var(--accent-draw), var(--accent-solar));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  margin-bottom: 0.75rem;
+}
+
+.tagline {
+  color: var(--text-secondary);
+  font-size: 1.1rem;
+}
+
+.cards {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 1.5rem;
+  max-width: 860px;
+  width: 100%;
+}
+
+.card {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 1rem;
+  padding: 2rem;
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: 1.25rem;
+  text-align: left;
+  transition: transform 0.2s ease, box-shadow 0.2s ease, border-color 0.2s ease;
+  overflow: hidden;
+}
+
+.card::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  opacity: 0;
+  transition: opacity 0.2s ease;
+  border-radius: inherit;
+}
+
+.card--draw::before {
+  background: radial-gradient(ellipse at top left, var(--accent-draw-glow), transparent 70%);
+}
+
+.card--solar::before {
+  background: radial-gradient(ellipse at top left, var(--accent-solar-glow), transparent 70%);
+}
+
+.card:hover {
+  transform: translateY(-4px);
+}
+
+.card--draw:hover {
+  border-color: var(--accent-draw);
+  box-shadow: 0 8px 32px var(--accent-draw-glow);
+}
+
+.card--solar:hover {
+  border-color: var(--accent-solar);
+  box-shadow: 0 8px 32px var(--accent-solar-glow);
+}
+
+.card:hover::before {
+  opacity: 1;
+}
+
+.cardEmoji {
+  font-size: 2.25rem;
+  line-height: 1;
+}
+
+.cardTitle {
+  font-size: 1.5rem;
+  font-weight: 700;
+  letter-spacing: -0.02em;
+  color: var(--text-primary);
+}
+
+.cardDesc {
+  font-size: 0.9rem;
+  line-height: 1.6;
+  color: var(--text-secondary);
+}
+
+.gestures {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 0.3rem;
+  width: 100%;
+}
+
+.gestures li {
+  font-size: 0.8rem;
+  color: var(--text-secondary);
+  padding: 0.25rem 0.5rem;
+  background: var(--surface-2);
+  border-radius: 0.4rem;
+  border: 1px solid var(--border);
+}
+
+.cardCta {
+  font-size: 0.875rem;
+  font-weight: 600;
+  margin-top: auto;
+}
+
+.card--draw .cardCta { color: var(--accent-draw); }
+.card--solar .cardCta { color: var(--accent-solar); }
+
+.footer {
+  color: var(--text-secondary);
+  font-size: 0.8rem;
+}

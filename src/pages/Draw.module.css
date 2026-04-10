@@ -1,0 +1,61 @@
+.shell {
+  position: relative;
+  width: 100vw;
+  height: 100vh;
+  background: #0a0a0f;
+  overflow: hidden;
+}
+
+.back {
+  position: absolute;
+  top: 1.25rem;
+  left: 1.25rem;
+  z-index: 40;
+  color: var(--text-secondary);
+  font-size: 0.875rem;
+  font-weight: 500;
+  padding: 0.4rem 0.75rem;
+  border: 1px solid var(--border);
+  border-radius: 0.5rem;
+  background: rgba(19, 19, 26, 0.75);
+  backdrop-filter: blur(6px);
+  transition: color 0.15s, border-color 0.15s;
+  cursor: pointer;
+}
+.back:hover {
+  color: var(--text-primary);
+  border-color: var(--text-secondary);
+}
+
+/* Bottom-left button group */
+.bottomLeft {
+  position: absolute;
+  bottom: 1.25rem;
+  left: 1.25rem;
+  z-index: 40;
+  display: flex;
+  gap: 0.5rem;
+}
+
+.topBtn {
+  font-size: 0.8rem;
+  font-weight: 500;
+  padding: 0.4rem 0.75rem;
+  border: 1px solid var(--border);
+  border-radius: 0.5rem;
+  background: rgba(19, 19, 26, 0.75);
+  backdrop-filter: blur(6px);
+  color: var(--text-secondary);
+  cursor: pointer;
+  transition: color 0.15s, border-color 0.15s, background 0.15s;
+  white-space: nowrap;
+}
+.topBtn:hover {
+  color: var(--text-primary);
+  border-color: var(--text-secondary);
+}
+.topBtnOn {
+  border-color: var(--accent-draw);
+  color: var(--accent-draw);
+  background: rgba(167, 139, 250, 0.1);
+}
