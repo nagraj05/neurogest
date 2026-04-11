@@ -134,3 +134,48 @@
   color: var(--text-secondary);
   font-size: 0.8rem;
 }
+
+.mobileWarning {
+  display: none;
+}
+
+@media (max-width: 768px) {
+  .cards,
+  .footer {
+    display: none;
+  }
+
+  .mobileWarning {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    gap: 1.25rem;
+    padding: 2.5rem 2rem;
+    background: var(--surface);
+    border: 1px solid var(--border);
+    border-radius: 1.5rem;
+    width: 100%;
+    max-width: 420px;
+  }
+
+  .mobileIcon {
+    font-size: 3rem;
+    line-height: 1;
+  }
+
+  .mobileTitle {
+    font-size: 1.5rem;
+    font-weight: 700;
+    letter-spacing: -0.02em;
+    color: var(--text-primary);
+    margin: 0;
+  }
+
+  .mobileText {
+    font-size: 0.95rem;
+    line-height: 1.7;
+    color: var(--text-secondary);
+    margin: 0;
+  }
+}

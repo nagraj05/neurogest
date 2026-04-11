@@ -25,6 +25,14 @@ export default function Home() {
 
   return (
     <div className={styles.page}>
+      <div className={styles.mobileWarning}>
+        <div className={styles.mobileIcon}>🖥️</div>
+        <h2 className={styles.mobileTitle}>Made for the big screen</h2>
+        <p className={styles.mobileText}>
+          NeuroGest uses your webcam and hand gestures to control interactive experiences.
+          Open it on a desktop or laptop for the full experience.
+        </p>
+      </div>
       <header className={styles.header}>
         <div className={styles.logo}>NeuroGest</div>
         <p className={styles.tagline}>Control with your hands. No mouse required.</p>
